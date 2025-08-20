@@ -1,0 +1,16 @@
+import Container from '@mui/material/Container';
+import Typography from '@mui/material/Typography';
+import { FinanceForm } from "./components/FinanceForm";
+
+function App() {
+  return (
+    <Container maxWidth="sm" sx={{ py: 8 }}>
+      <Typography variant="h5" fontWeight="bold" gutterBottom>
+        ForexPOOL月末残高計算
+      </Typography>
+      <FinanceForm />
+    </Container>
+  );
+}
+
+export default App;
