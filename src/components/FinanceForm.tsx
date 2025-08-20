@@ -12,9 +12,9 @@ type FinanceFormValues = {
 export const FinanceForm: React.FC = () => {
   const { register, control, setValue } = useForm<FinanceFormValues>({
     defaultValues: {
-      initialBalance: 28717564,
-      feeRate: 12.5,
-      grossYield: 1.07,
+      initialBalance: 10000000,
+      feeRate: 25.0,
+      grossYield: 2.50,
     },
   });
 
