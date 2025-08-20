@@ -65,7 +65,7 @@ export const FinanceForm: React.FC = () => {
         color="primary"
         sx={{ backgroundColor: "#FFF9E5" }}
         {...register("feeRate")}
-        InputProps={{ inputProps: { step: 0.0001 } }}
+        InputProps={{ inputProps: { step: 0.1 } }}
       />
       <TextField
         label="収益率%（手数料前）（B3）"
@@ -74,7 +74,7 @@ export const FinanceForm: React.FC = () => {
         color="primary"
         sx={{ backgroundColor: "#FFF9E5" }}
         {...register("grossYield")}
-        InputProps={{ inputProps: { step: 0.0001 } }}
+        InputProps={{ inputProps: { step: 0.1 } }}
       />
       {/* 計算項目 */}
       <TextField
