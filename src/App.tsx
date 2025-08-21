@@ -4,8 +4,8 @@ import { FinanceForm } from "./components/FinanceForm";
 
 function App() {
   return (
-    <Container maxWidth="sm" sx={{ py: 8 }}>
-      <Typography variant="h5" fontWeight="bold" gutterBottom>
+    <Container maxWidth="sm" sx={{ pt: 8 }}>
+      <Typography variant="h5" fontWeight="bold" align="center" sx={{ mb: 4 }}>
         ForexPOOL月末残高計算
       </Typography>
       <FinanceForm />
