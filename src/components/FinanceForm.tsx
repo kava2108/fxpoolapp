@@ -1,5 +1,5 @@
 import { useForm, useWatch } from "react-hook-form";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 
@@ -19,18 +19,14 @@ export const FinanceForm: React.FC = () => {
   });
 
   const { initialBalance, feeRate, grossYield } = useWatch({ control });
-  const [initialBalanceDisplay, setInitialBalanceDisplay] = useState<string>(String(initialBalance ?? 28717564));
-
-  // initialBalanceが変更されたら表示値も更新
-  useEffect(() => {
-    setInitialBalanceDisplay(String(initialBalance ?? 28717564));
-  }, [initialBalance]);
-
+  const [initialBalanceDisplay, setInitialBalanceDisplay] = useState<string>(
+    (initialBalance ?? 0).toLocaleString()
+  );
 
   // %入力対応
   const feeRatePercent = (feeRate ?? 0) / 100;
   const grossYieldPercent = (grossYield ?? 0) / 100;
-  const netYieldPercent = grossYieldPercent * (1 - feeRatePercent);
+  const netYieldPercent = grossYieldPercent < 0 ? grossYieldPercent : grossYieldPercent * (1 - feeRatePercent);
   const finalBalance = (initialBalance ?? 0) * (1 + netYieldPercent);
 
   return (
