@@ -34,7 +34,7 @@ export const FinanceForm: React.FC = () => {
       <Box component="form" sx={{ p: 4, borderRadius: 3, boxShadow: 3, display: 'flex', flexDirection: 'column', gap: 3, maxWidth: 400, width: '100%' }}>
       {/* 入力項目 */}
       <TextField
-        label="月初残高（B1）"
+        label="月初残高"
         type="text"
         variant="outlined"
         sx={{ backgroundColor: "#FFF9E5" }}
@@ -55,7 +55,7 @@ export const FinanceForm: React.FC = () => {
         InputProps={{ inputProps: { step: 1 } }}
       />
       <TextField
-        label="手数料%（B2）"
+        label="手数料%"
         type="number"
         variant="outlined"
         color="primary"
@@ -64,7 +64,7 @@ export const FinanceForm: React.FC = () => {
         InputProps={{ inputProps: { step: 0.1 } }}
       />
       <TextField
-        label="収益率%（手数料前）（B3）"
+        label="収益率%（手数料前）"
         type="number"
         variant="outlined"
         color="primary"
@@ -74,7 +74,7 @@ export const FinanceForm: React.FC = () => {
       />
       {/* 計算項目 */}
       <TextField
-        label="収益率%（手数料後）（B4）"
+        label="収益率%（手数料後）"
         type="number"
         variant="outlined"
         color="primary"
@@ -83,7 +83,7 @@ export const FinanceForm: React.FC = () => {
         InputProps={{ readOnly: true }}
       />
       <TextField
-        label="月末残高（B5）"
+        label="月末残高"
         type="text"
         variant="outlined"
         color="primary"
